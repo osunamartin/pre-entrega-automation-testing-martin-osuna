@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
-
+import time
 
 options = Options()
 driver = webdriver.Chrome(options=options)
@@ -30,5 +30,14 @@ try:
  first_price = products[0].find_element(By.CSS_SELECTOR, ".inventory_item_price").text
  print(f"Primer producto → {first_name} – {first_price}")
 
+ # 5) Agregar un producto al carrito
+ driver.find_element(By.ID, 'add-to-cart-sauce-labs-backpack').click()
+ print(f"{first_name} agregado al carrito")
+
+ # 6) Reiniciar al estado original de la web
+ driver.find_element(By.ID, 'react-burger-menu-btn').click()
+ driver.implicitly_wait(3)
+ driver.find_element(By.ID, 'reset_sidebar_link').click()
+ 
 finally:
  driver.quit()
