@@ -21,7 +21,7 @@ El objetivo es:
 1. Clonar este repositorio:
 
    git clone https://github.com/osunamartin/pre-entrega-automation-testing-martin-osuna.git
-   cd '.\pre entrega talento tech\'
+   cd 'pre-entrega-automation-testing-martin-osuna'
 
 2. Crear y activar un entorno virtual:
    
@@ -31,7 +31,7 @@ El objetivo es:
 
 3. Instalar dependencias necesarias:
 
-   selenium==4.36.0 o superior
+   pip install selenium (debe ser la versión 4.36.0 o superior)
 
 4. (Scripts probados en Google Chrome) Verificar que Google Chrome esté instalado y asegurarse de tener la versión de ChromeDriver correspondiente a la versión del navegador.
 
