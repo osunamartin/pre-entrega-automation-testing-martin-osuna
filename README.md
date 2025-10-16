@@ -39,3 +39,8 @@ El objetivo es:
 
   (Ejecución directa): python test_swaglabs.py 
   (Con Pytest luego de haberlo instalado bajo el comando pip install pytest):  pytest -v
+
+
+## ❌ Errores conocidos:
+
+   Al momento de ejecutar el último paso (reinicio de la página a su estado original) algunas veces aparece una alerta seguridad de contraseña, lo que hace que este paso no llegue a ejecutarse.
