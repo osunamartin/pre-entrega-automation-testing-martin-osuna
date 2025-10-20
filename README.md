@@ -20,14 +20,14 @@ El objetivo es:
 
 1. Clonar este repositorio:
 
-   git clone https://github.com/osunamartin/pre-entrega-automation-testing-martin-osuna.git
-   cd 'pre-entrega-automation-testing-martin-osuna'
+   *git clone https://github.com/osunamartin/pre-entrega-automation-testing-martin-osuna.git
+   *cd 'pre-entrega-automation-testing-martin-osuna'
 
 2. Crear y activar un entorno virtual:
    
    python -m venv venv
-   source venv/bin/activate     # Linux / Mac
-   venv\Scripts\activate        # Windows
+   *source venv/bin/activate     # En Linux / Mac
+   *venv\Scripts\activate        # En Windows
 
 3. Instalar dependencias necesarias:
 
@@ -37,8 +37,8 @@ El objetivo es:
 
 5. Ejecutar scripts de pruebas:
 
-  (Ejecución directa): python test_swaglabs.py 
-  (Con Pytest luego de haberlo instalado bajo el comando pip install pytest):  pytest -v
+  *(Ejecución directa): python test_swaglabs.py 
+  *(Con Pytest luego de haberlo instalado bajo el comando pip install pytest):  pytest -v
 
 
 ## ❌ Errores conocidos:
