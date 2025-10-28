@@ -44,6 +44,15 @@ class InventoryPage:
 		from pages.cart_page import CartPage
 		return CartPage(self.driver)
 	
+	def confirmar_productos_carrito(self): #Sólo verifica el primer producto, revisar
+		primer_producto = InventoryPage.obtener_productos()[0]
+		nombre_producto = primer_producto.text
+		nombres_en_carrito = InventoryPage.obtener_nombres_productos
+		assert nombre_producto in nombres_en_carrito, (
+        f"El producto '{nombre_producto}' no se encontró en el carrito. "
+        f"Productos en el carrito: {nombres_en_carrito}"
+    )
+	
 	def hacer_logout(self):
 		# Cierra la sesión del usuario.
 		self.driver.find_element(*self._MENU_BUTTON).click()

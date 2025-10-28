@@ -9,12 +9,11 @@ def test_login_agregar_producto():
 
     #Agregar el primer producto al carrito
     InventoryPage.agregar_primer_producto
-
-    #Ir al Carrito
+    
+    #Ir al carrito
     InventoryPage.ir_al_carrito
 
-    #Obtener los nombres de los productos en el carrito.
-    CartPage.obtener_nombres_productos
-
+    #Confirmar que el producto está en el carrito (Revisar función en /inventory_page.py)
+    InventoryPage.confirmar_productos_carrito
 
 
