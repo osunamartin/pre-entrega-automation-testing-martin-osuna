@@ -27,31 +27,31 @@ class LoginPage:
 	# 4. MÉTODOS DE NAVEGACIÓN Y ACCIÓN
 
 	def abrir(self):
-		"""Carga la URL de login en el navegador."""
+		#Carga la URL de login en el navegador.
 		self.driver.get(self.URL)
 		return self
 	
 	def completar_usuario(self, usuario: str):
-		"""Escribe el nombre de usuario."""
+		#Escribe el nombre de usuario.
 		campo = self.wait.until(EC.visibility_of_element_located(self._USER_INPUT))
 		campo.clear() # Limpia antes de escribir
 		campo.send_keys(usuario)
 		return self
 	
 	def completar_clave(self, clave: str):
-		"""Escribe la contraseña."""
+		#Escribe la contraseña.
 		campo = self.driver.find_element(*self._PASS_INPUT)
 		campo.clear()
 		campo.send_keys(clave)
 		return self
 	
 	def hacer_clic_login(self):
-		"""Hace clic en el botón Login."""
+		#Hace clic en el botón Login.
 		self.driver.find_element(*self._LOGIN_BUTTON).click()
 		return self
 	
 	def login_completo(self, usuario, clave):
-		"""Método de conveniencia para hacer login completo."""
+		#Método de conveniencia para hacer login completo.
 		self.completar_usuario(usuario)
 		self.completar_clave(clave)
 		self.hacer_clic_login()
@@ -70,7 +70,7 @@ class LoginPage:
 			return False
 	
 	def obtener_mensaje_error(self) -> str:
-		"""Obtiene el texto del mensaje de error."""
+		#Obtiene el texto del mensaje de error.
 		if self.esta_error_visible():
 			return self.driver.find_element(*self._ERROR_MESSAGE).text
 		return ""

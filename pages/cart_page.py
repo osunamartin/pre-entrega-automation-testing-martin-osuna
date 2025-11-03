@@ -14,22 +14,22 @@ class CartPage:
 		self.wait.until(EC.url_contains("cart.html"))
 
 	def obtener_productos_en_carrito(self):
-		"""Obtiene la lista de productos en el carrito."""
+		#Obtiene la lista de productos en el carrito.
 		return self.driver.find_elements(*self._CART_ITEMS)
 
 	def obtener_nombres_productos(self):
-		"""Obtiene los nombres de todos los productos en el carrito."""
+		#Obtiene los nombres de todos los productos en el carrito.
 		elementos_nombre = self.driver.find_elements(*self._ITEM_NAMES)
 		return [elemento.text for elemento in elementos_nombre]
 
 	def continuar_comprando(self):
-		"""Regresa a la página de inventario."""
+		#Regresa a la página de inventario.
 		self.driver.find_element(*self._CONTINUE_SHOPPING).click()
 		from pages.inventory_page import InventoryPage
 		return InventoryPage(self.driver)
 
 	def proceder_checkout(self):
-		"""Inicia el proceso de checkout."""
+		#Inicia el proceso de checkout.
 		self.driver.find_element(*self._CHECKOUT_BUTTON).click()
 # Aquí podrías devolver CheckoutPage cuando la implementes
 		return self

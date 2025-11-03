@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 
 @pytest.fixture(scope="function")
 def driver():
-	"""Fixture que proporciona un WebDriver configurado."""
+	#Fixture que proporciona un WebDriver configurado.
 	chrome_options = Options()
 	# chrome_options.add_argument("--headless") # Para CI/CD
 	chrome_options.add_argument("--no-sandbox")
