@@ -1,6 +1,4 @@
-# tests/test_login.py
 import pytest
-#from pages.login_page2 import *
 from pages.login_page import *
 
 '''
