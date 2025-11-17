@@ -439,10 +439,10 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 17-Nov-2025 at 10:42:00 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 17-Nov-2025 at 11:08:48 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Summary</h2>
-    <p>4 tests ran in 25.10 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">4 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>4 tests ran in 24.67 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">3 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -453,20 +453,20 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="5">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="passed results-table-row">
+      <tbody class="failed results-table-row">
         <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/test_login_csv.py::test_login_parametrizado[standard_user-secret_sauce-True]</td>-
-          <td class="col-duration">6.06</td>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_login_csv.py::test_login_parametrizado[standard_user-secret_sauc-True]</td>-
+          <td class="col-duration">6.24</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="5">
-            <div class="empty log">No log output captured.</div></td></tr></tbody>
+            <div class="log">driver = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;aa05b35083507e8a23dcf4a69068a9d4&quot;)&gt;<br/>request = &lt;FixtureRequest for &lt;Function test_login_parametrizado[standard_user-secret_sauc-True]&gt;&gt;, usuario = &#x27;standard_user&#x27;, clave = &#x27;secret_sauc&#x27;, debe_funcionar = True<br/><br/>    @pytest.mark.parametrize(&quot;usuario, clave, debe_funcionar&quot;, leer_csv_login(ruta_csv))<br/>    def test_login_parametrizado(driver, request, usuario, clave, debe_funcionar):<br/>        login = LoginPage(driver)<br/>        login.abrir()<br/>        login.completar_usuario(usuario)<br/>        login.completar_clave(clave)<br/>    <br/>        login.hacer_clic_login()<br/>    <br/>        # Guardar URL actual para el reporte<br/>        request.node.page_url = driver.current_url<br/>    <br/>        if debe_funcionar:<br/>&gt;           assert &quot;inventory.html&quot; in driver.current_url<br/><span class="error">E           assert &#x27;inventory.html&#x27; in &#x27;https://www.saucedemo.com/&#x27;</span><br/><span class="error">E            +  where &#x27;https://www.saucedemo.com/&#x27; = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;aa05b35083507e8a23dcf4a69068a9d4&quot;)&gt;.current_url</span><br/><br/>tests\test_login_csv.py:22: AssertionError<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_login_csv.py::test_login_parametrizado[locked_out_user-secret_sauce-False]</td>-
-          <td class="col-duration">6.38</td>
+          <td class="col-duration">6.05</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="5">
@@ -475,7 +475,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_login_csv.py::test_login_parametrizado[problem_user-secret_sauce-True]</td>-
-          <td class="col-duration">6.16</td>
+          <td class="col-duration">6.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="5">
@@ -484,7 +484,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_login_csv.py::test_login_parametrizado[usuario_malo-password_malo-False]</td>-
-          <td class="col-duration">6.31</td>
+          <td class="col-duration">5.87</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="5">
