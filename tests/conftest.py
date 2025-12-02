@@ -4,6 +4,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 
+
+
 @pytest.fixture(scope="function")
 def driver():
 	#Fixture que proporciona un WebDriver configurado.
@@ -59,3 +61,11 @@ def pytest_runtest_makereport(item, call):
             'format': 'image',
             'content': str(file_name)
         })
+
+@pytest.fixture
+def url_base():
+    return "https://reqres.in/api/users"
+
+@pytest.fixture
+def header_request():
+      return {"x-api-key": "reqres-free-v1"}
