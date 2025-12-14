@@ -196,6 +196,8 @@ El reporte incluye:
 
 ---
 
+## ⚠️ Si bien existe un archivo behave.ini, no se terminó de implementar para este proyecto.
+
 ## 👤 Autor
 
 **Martín Osuna**
