@@ -1,10 +1,121 @@
+ENG
+
+## 🎯 Test Automation Project – UI (Selenium) and API (ReqRes)
+
+This project includes UI test automation for the SwagLabs (SauceDemo) website and API testing for the public ReqRes API, using Python and Pytest.
+
+Good automation practices are applied, such as Page Object Model (POM), use of fixtures, and HTML report generation.
+
+
+## 📌 Project Purpose
+
+The objective of this project is:
+
+* Practice and demonstrate knowledge in UI test automation with Selenium
+* Implement automated API tests using requests and Pytest
+* Apply good design practices such as Page Object Model (POM) for UI
+* Centralize configurations and utilities using conftest.py
+* Generate clear and visual HTML reports for result analysis
+
+
+## 🧪 Test Scope
+
+### 🔹 UI Tests – SwagLabs (SauceDemo)
+
+Site: https://www.saucedemo.com
+
+Automated flows:
+
+* User login
+* Inventory validation
+* Adding products to the cart
+* Resetting application state
+
+UI tests are structured using Page Object Model (POM) to improve:
+
+* Readability
+* Maintainability
+* Code reusability
+
+### 🔹 API Tests – ReqRes
+
+API used: https://reqres.in
+
+Covered endpoints:
+
+* Get user by ID (GET)
+* List users (GET)
+* Create user (POST)
+* Delete user (DELETE)
+* Successful login (POST)
+* Failed login (POST – negative case)
+
+API tests validate:
+
+* HTTP status codes
+* Response structure
+* Key data returned by the API
+
+⚠️ Important note: ReqRes currently requires the use of an API Key to access its endpoints.
+
+## 🛠️ Technologies Used
+
+* Python
+* Pytest
+* Selenium WebDriver
+* Requests (for API testing)
+* Google Chrome
+* ChromeDriver
+* pytest-html (reports)
+
+## ⚙️ Installation and Setup
+
+### 1️⃣ Clone the repository
+
+git clone https://github.com/osunamartin/pre-entrega-automation-testing-martin-osuna.git
+cd pre-entrega-automation-testing-martin-osuna
+
+### 2️⃣ Create and activate virtual environment
+
+python -m venv venv
+
+Linux / Mac:
+source venv/bin/activate
+
+Windows:
+venv\Scripts\activate
+
+### 3️⃣ Install dependencies
+
+pip install selenium pytest requests pytest-html
+
+⚠️ Selenium must be version 4.36.0 or higher.
+
+### 4️⃣ Configure ReqRes API Key
+
+Create a free API Key at: 👉 https://app.reqres.in
+
+Then add it in the corresponding fixture (for example, in conftest.py):
+
+@pytest.fixture
+def api_headers():
+return {
+"x-api-key": "YOUR_API_KEY_HERE",
+"Content-Type": "application/json"
+}
+
+
+⚠️ Use a valid API key for this step. The author’s key is not included for security reasons.
+
+
+---
+ESP
+
 # Proyecto de Automatización de Pruebas – UI (Selenium) y API (ReqRes)
 
 Este proyecto incluye la automatización de **pruebas UI** sobre el sitio **SwagLabs (SauceDemo)** y **pruebas de API** sobre la API pública **ReqRes**, utilizando **Python** y **Pytest**.
 
 Se aplican buenas prácticas de automatización, como **Page Object Model (POM)**, uso de **fixtures**, y generación de **reportes HTML**.
-
----
 
 ## 📌 Propósito del proyecto
 
@@ -15,8 +126,6 @@ El objetivo de este proyecto es:
 * Aplicar **buenas prácticas de diseño**, como **Page Object Model (POM)** para UI.
 * Centralizar configuraciones y utilidades mediante `conftest.py`.
 * Generar **reportes HTML** claros y visuales para el análisis de resultados.
-
----
 
 ## 🧪 Alcance de las pruebas
 
@@ -36,8 +145,6 @@ Las pruebas UI están estructuradas utilizando **Page Object Model (POM)** para 
 * Legibilidad
 * Mantenibilidad
 * Reutilización de código
-
----
 
 ### 🔹 Pruebas de API – ReqRes
 
@@ -60,7 +167,6 @@ Las pruebas de API validan:
 
 ⚠️ **Nota importante**: ReqRes actualmente requiere el uso de una **API Key** para acceder a sus endpoints.
 
----
 
 ## 🛠️ Tecnologías utilizadas
 
@@ -72,7 +178,6 @@ Las pruebas de API validan:
 * **ChromeDriver**
 * **pytest-html** (reportes)
 
----
 
 ## ⚙️ Instalación y configuración
 
@@ -82,8 +187,6 @@ Las pruebas de API validan:
 git clone https://github.com/osunamartin/pre-entrega-automation-testing-martin-osuna.git
 cd pre-entrega-automation-testing-martin-osuna
 ```
-
----
 
 ### 2️⃣ Crear y activar entorno virtual
 
@@ -103,8 +206,6 @@ source venv/bin/activate
 venv\Scripts\activate
 ```
 
----
-
 ### 3️⃣ Instalar dependencias
 
 ```bash
@@ -112,8 +213,6 @@ pip install selenium pytest requests pytest-html
 ```
 
 ⚠️ Selenium debe ser versión **4.36.0 o superior**.
-
----
 
 ### 4️⃣ Configurar API Key de ReqRes
 
@@ -133,7 +232,6 @@ def api_headers():
 
 ⚠️ **Usar una apikey válida para este último paso. No se muestra la usada por el autor por motivos de seguridad**.
 
----
 
 ## ▶️ Ejecución de pruebas
 
@@ -143,7 +241,6 @@ def api_headers():
 pytest -v
 ```
 
----
 
 ### 🔹 Ejecutar pruebas con reporte HTML
 
@@ -165,7 +262,6 @@ El reporte incluye:
 * Screenshots automáticos en fallos de UI
 * Columna con la URL visitada en tests de Selenium
 
----
 
 ## 🧩 Estructura del proyecto (resumen parcial)
 
@@ -183,8 +279,6 @@ El reporte incluye:
 ├── pytest.ini
 ├── README.md
 ```
-
----
 
 ## 🧠 Buenas prácticas aplicadas
 
